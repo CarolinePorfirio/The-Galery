@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PostsController!{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row justify-content-center align-content-center">
+            <div class="col-md-6 rounded my-3 p-5">
+                <h1 class="text-blue text-center">¡Ya eres un artista! <br> </h1>
+                <h2 class=" text-blue text-center mb-4"> Exponga tu obra en nuestra galeria:</h2>
+                {{ form(form) }}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

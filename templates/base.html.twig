@@ -2,11 +2,45 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <title>{% block title %}Welcome to The-Galery{% endblock %}</title>
+
+        {% block stylesheets %}
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+            <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        {% endblock %}
+
     </head>
+
     <body>
+
+    <nav class="navbar navbar-expand-lg ">
+        <a class="navbar-brand" href="#">
+            <img class="logo-size" src="{{ asset('img/logo.png') }}">
+        </a>
+        <div class="collapse navbar-collapse justify-content-end">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{{ path('landing') }}">Home <span class="sr-only">(página atual)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{{ path('RegistrarPost') }}">Crear Post</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{{ path('MisPosts') }}">Mis Posts</a>
+                </li>
+            </ul>
+            <div class="">
+                <a class="btn btn-login" href="{{ path('app_login') }}">Salir</a>
+            </div>
+        </div>
+    </nav>
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        {% endblock %}
+
+
     </body>
 </html>

@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{parent()}} - Post
+{% endblock %}
+
+{% block body %}
+
+    <div class="container mt-5 mb-5">
+        <div class="row custom-top justify-content-center">
+            {% for post in posts %}
+                <div class="card custom-card justify-content-center" style="width: 200px; height: 150px" onclick="window.location.href='{{ path('Verpost', {id:post.id})}}'">
+                    <div class="card-img-top img-top">
+                        <img class="custom-img" src="{{ asset('uploads/photos/'~post.imagen) }}">
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

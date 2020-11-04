@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{parent()}} - Post
+{% endblock %}
+
+{% block body %}
+    <div class="container mb-5" style="margin-top: 150px">
+        <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-img-top">
+                            <img style="width: 100%; height: auto" src="{{ asset('uploads/photos/'~post.imagen) }}">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="text-blue"> {{ post.titulo }}</h2>
+                            <h5 class="font-20 mt-4"> Descripcion: <br> {{ post.descripcion }}</h5>
+                            <h4 class="font-15 font-weight-bold mt-3">Publicado en {{ post.fechapublicacion | date }}</h4>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+{% endblock %}
