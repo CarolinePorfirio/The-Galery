@@ -1,11 +1,11 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-    {{parent()}} - Landing Page
+    {{parent()}} - Home
 {% endblock %}
 
 {% block body %}
-    <div class="container mt-5 mb-5">
+    <div class="container mt-7 mb-5">
         <h1 class="text-center text-blue">Conosca la galeria de imagenes de The Galery</h1>
         <div class="row justify-content-center">
             {% for post in pagination %}

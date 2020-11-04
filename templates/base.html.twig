@@ -6,6 +6,7 @@
 
         {% block stylesheets %}
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
             <link rel="stylesheet" href="{{ asset('css/style.css') }}">
         {% endblock %}
 
@@ -34,7 +35,49 @@
             </div>
         </div>
     </nav>
-        {% block body %}{% endblock %}
+
+    {% block body %}{% endblock %}
+
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <img class="logo-size" src="{{ asset('img/logo.png') }}">
+                    <p class="text-blue font-weight-bold font-20">¡La galeria digital para artistas virtuales!</p>
+                </div>
+                <div class="col-md-3 mt-5">
+                    <ul class="">
+                        <li><i class="fas fa-angle-double-right custon-icon"></i> <a href="{{ path('landing') }}">Home</a>  </li>
+                        <li><i class="fas fa-angle-double-right custon-icon "></i> <a href="{{ path('RegistrarPost') }}">Crear Post</a>  </li>
+                        <li><i class="fas fa-angle-double-right custon-icon"></i> <a href="{{ path('MisPosts') }}">Mis Posts</a>  </li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mt-5">
+                    <p class="text-white text-center custom-top2">Quieres ser un artista <br> de The-Galery? <br> ¡Registrate y exponga su arte con nosotros!</p>
+                    <ul>
+                        <li><i class="fas fa-angle-double-right custon-icon"></i> <a href="{{ path('register') }}">Registrar</a>  </li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mt-5">
+                    <p class="text-white text-center custom-top2">¡Visita las Redes Sociales de <br> The-Galery para se encantar con aun mas artes!</p>
+                    <div class="row justify-content-center">
+                        <a href=""><i class="fab fa-instagram fa-2x" style="color: #1a1055; margin: 5px 15px"></i></a>
+                        <a href=""><i class="fab fa-facebook-f fa-2x" style="color: #1a1055; margin: 5px 15px"></i></a>
+                        <a href=""><i class="fab fa-pinterest-p fa-2x" style="color: #1a1055; margin: 5px 15px"></i></a>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+
+
+
         {% block javascripts %}
             <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
